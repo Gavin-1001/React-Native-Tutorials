@@ -1,4 +1,4 @@
-import {View, Text, Image, ImageBackground, ScrollView, Button, Pressable, Modal} from "react-native"
+import {View, Text, Image, ImageBackground, ScrollView, Button, Pressable, Modal, ActivityIndicator} from "react-native"
 import { useState } from "react";
 import { StatusBar } from "expo-status-bar";
 
@@ -12,16 +12,10 @@ export default function App(){
 
   return( 
   <View style={{backgroundColor:"plum", flex: 1, padding: 60}}>
-       <StatusBar
-        backgroundColor="lightgreen"
-        barStyle="light-content"
-        hidden={isStatusBarVisible}
-      />
-      <Button
-        title="Hide / Show StatusBar"
-        onPress={() => setIsStatusBarVisible(!isStatusBarVisible)}
-      />
-      {/* only works on android */}
-        </View> 
+      <ActivityIndicator />
+      <ActivityIndicator size={"large"}/>
+      <ActivityIndicator size={"large"} color={"midnightblue"}/>
+      <ActivityIndicator size={"large"} color={"midnightblue"} animating={false}/>
+  </View> 
   );
 }
