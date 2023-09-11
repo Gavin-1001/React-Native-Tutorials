@@ -1,4 +1,4 @@
-import {View, Text, Image, ImageBackground, ScrollView, Button, Pressable, Modal, ActivityIndicator} from "react-native"
+import {View, Text, Image, ImageBackground, ScrollView, Button, Pressable, Modal, ActivityIndicator, Alert} from "react-native"
 import { useState } from "react";
 import { StatusBar } from "expo-status-bar";
 
@@ -12,10 +12,18 @@ export default function App(){
 
   return( 
   <View style={{backgroundColor:"plum", flex: 1, padding: 60}}>
-      <ActivityIndicator />
-      <ActivityIndicator size={"large"}/>
-      <ActivityIndicator size={"large"} color={"midnightblue"}/>
-      <ActivityIndicator size={"large"} color={"midnightblue"} animating={false}/>
+    <Button title={"Alert"} onPress={()=> Alert.alert("Invalid data...")}/>
+    <Button title={"Alert 2"} onPress={()=> Alert.alert("Invalid data...", "Data of birth incorrect")}/>
+    <Button title={"Alert 3"} onPress={()=> Alert.alert("Invalid data...", "Data of birth incorrect", [
+      {
+        text: "Cancel",
+        onPress:() => console.log("CANCEL PRESSED")
+      },
+      {
+        text: "OK",
+        onPress:() => console.log("OK PRESSED")
+      },
+    ])}/>
   </View> 
   );
 }
