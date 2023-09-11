@@ -8,8 +8,7 @@ export default function App(){
 
   return( 
   <View style={{backgroundColor:"plum", flex: 1, padding: 60}}>
-      <Greet username="Myname"/>
-      <Greet username="yourName"/>
+
   </View> 
   );
 }
