@@ -4,6 +4,9 @@ export default function App(){
   return (
 
     <View style={styles.container}>
+      <View style={styles.darkMode}>
+        <Text style={styles.darkModeText}>Style Inheritance<Text style={styles.boldText}> in bold</Text></Text>
+      </View>
     <View style={[styles.lightblueBg, styles.box, styles.boxShadow]}>
       <Text>
         Lightblue box
@@ -36,6 +39,9 @@ const styles = StyleSheet.create({
   lightgreenBg: {
     backgroundColor: "lightgreen",
   },
+  boldText: {
+    fontWeight: "bold",
+  },
   boxShadow: {
     shadowColor: "#333333",
     shadowOffset: {
@@ -47,7 +53,14 @@ const styles = StyleSheet.create({
   },
   androidShadow: {
     elevation: 10,
-  }
+  },
+
+  darkMode: {
+    backgroundColor: "black",
+  },
+  darkModeText: {
+    color: "white",
+  },
 
 
 
