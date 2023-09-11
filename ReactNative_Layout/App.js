@@ -19,11 +19,13 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "row-reverse",
+    flex: 1, 
     marginTop: 64,
+    flexDirection: "row",
+    justifyContent: "center",
     borderWidth: 6,
-    flex: 1,
     borderColor: "red"
+    
   }, 
 
 });
